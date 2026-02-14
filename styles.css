@@ -90,6 +90,10 @@ body {
   color: #a3124f;
 }
 
+.page h2:empty {
+  display: none;
+}
+
 .memory-carousel {
   position: relative;
   min-height: 360px;
@@ -435,6 +439,35 @@ body {
 @media (min-width: 1024px) {
   .book {
     transform: scale(0.92);
+  }
+}
+
+@media (min-width: 900px) {
+  .book-pages {
+    min-height: 560px;
+  }
+
+  .memory-carousel {
+    min-height: 420px;
+  }
+
+  .memory-page {
+    grid-template-columns: 1.05fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: stretch;
+  }
+
+  .memory-page img {
+    height: 100%;
+    min-height: 320px;
+  }
+
+  .memory-page p {
+    max-height: none;
+    overflow-y: auto;
+    text-align: center;
+    font-size: 1.02rem;
+    padding: 1rem 1.1rem;
   }
 }
 
